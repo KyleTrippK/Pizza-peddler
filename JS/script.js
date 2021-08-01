@@ -5,7 +5,7 @@ $(document).ready(function(){
     $("#pizzacrust").addClass("text-center");
     $("#location").addClass("text-center");
     $("#toppings").addClass("text-center");
-    $("#toppingsbuttons").addClass("text-center");
+    $("#toppingsbuttons, #icons").addClass("text-center");
     // $("locationsection").addClass("text-center");
     // $("#idsects").addClass("text-center");
     $("#final, #finalPrice").addClass("text-center");
@@ -26,17 +26,19 @@ $(document).ready(function(){
         var pizzaSize = $("#pizzaSize").val();
         var pizzaCrust = $("#pizzaCrust").val();
         var pizzaTopping = $("#pizzaTopping").val();
+        var pizzaTopping = $("#pizzaTopping").val();
+        // var pizzaTopping =$("input[name='topping']:checked").val();
         var pizzaNumber = $("#pizzaNumber").val();
         var piza = new pizza(pizzaSize, pizzaCrust, pizzaTopping, pizzaNumber);
         //pizza size against price
         if(piza.size == "small"){
-            sizePrice = 500;
+            sizePrice = 300;
         }
         else if(piza.size == "medium"){
-            sizePrice = 800;
+            sizePrice = 600;
         }
         else{
-            sizePrice = 1000;
+            sizePrice = 900;
         }
         //pizza crust against price
         if(piza.crust == "stuffed crust"){
@@ -68,7 +70,7 @@ $(document).ready(function(){
         else{
             toppingPrice = 40;
         }
-        pizzaPrice = (sizePrice + crustPrice + toppingPrice +150)*pizzaNumber;
+        pizzaPrice = (sizePrice + crustPrice + toppingPrice)*pizzaNumber;
         $("#receivedOrder").show();
         $("#showPrice").html(pizzaPrice);
         $("#submit").hide();

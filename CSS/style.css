@@ -1,0 +1,42 @@
+body{
+    background-color: #e7ecee;
+}
+header{
+    background-color: brown;
+}
+#bigtextsmall{
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+}
+.bigtext{
+    font-family: 'Satisfy', cursive;
+    font-size: 10vh;
+}
+.heavenlyslice{
+    font-family: 'Courgette', cursive;
+    font-size: 3vh;
+}
+#about-text{
+    font-family: 'Courgette', cursive; 
+    font-size: x-large;
+}
+.emphasize{
+    font-size: xx-large
+}
+#orderpage, #mainform, #finalPrice, #location, #contacts{
+    font-family: 'Kalam', cursive;
+    font-weight: bolder;
+    font-size: larger;
+}
+.crust-images{
+    width: 40%;
+}
+.toppings{
+    width: 40%;
+}
+.contact{
+    background-color: brown;
+}
+#feedback{
+    width: 50%;
+}

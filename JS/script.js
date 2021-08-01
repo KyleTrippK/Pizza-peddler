@@ -9,7 +9,7 @@ $(document).ready(function(){
     $("#locationsection").addClass("text-center");
     $("#idsects").addClass("text-center");
     $("#final").addClass("text-center");
-    $("#jaribio").hide();
+    $("#jaribio, #locate, #location").hide();
 })
 
 // Business logic
@@ -54,6 +54,7 @@ $(document).ready(function(){
         else{
             crustPrice = 70;
         }
+
         //pizza toppings against price
         if(piza.toppings == "fresh basil"){
             toppingPrice = 10;
@@ -70,5 +71,13 @@ $(document).ready(function(){
         pizzaPrice = sizePrice + crustPrice + toppingPrice;
         $("#jaribio").show();
         $("#showprice").append(pizzaPrice);
+    })
+    $("#askDelivery").click(function(){
+        $("#jaribio").hide();
+        $("#locate").show();
+    })
+    $("#pick").click(function(){
+        $("#jaribio").hide();
+        $("#location").show();
     })
 })

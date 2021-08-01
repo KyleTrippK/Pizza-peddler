@@ -9,12 +9,12 @@ $(document).ready(function(){
     $("#locationsection").addClass("text-center");
     $("#idsects").addClass("text-center");
     $("#final").addClass("text-center");
-    $("#jaribio, #locate, #location").hide();
+    $("#receivedOrder, #locate, #location, #finalPrice").hide();
 })
 
 // Business logic
 var sizePrice, crustPrice, toppingPrice, pizzaPrice;
-function pizza(size, crust, toppings, number){
+function pizza(size, crust, toppings, number,){
     this.size = size;
     this.crust = crust;
     this.toppings = toppings;
@@ -68,16 +68,28 @@ $(document).ready(function(){
         else{
             toppingPrice = 40;
         }
-        pizzaPrice = sizePrice + crustPrice + toppingPrice;
-        $("#jaribio").show();
-        $("#showprice").append(pizzaPrice);
+        // var Delivery = 150;
+        pizzaPrice = (sizePrice + crustPrice + toppingPrice +150)*pizzaNumber;
+        // var deliv = pizzaPrice  = Delivery
+        $("#receivedOrder").show();
+        $("#showprice").html(pizzaPrice);
     })
     $("#askDelivery").click(function(){
-        $("#jaribio").hide();
+        $("#receivedOrder").hide();
         $("#locate").show();
     })
     $("#pick").click(function(){
-        $("#jaribio").hide();
+        $("#receivedOrder").hide();
         $("#location").show();
+    })
+    $("#deliveryBtn").click(function(){
+        $("#location").hide();
+        $("#finalPrice").show();
+        $("#tTotal").html(pizzaPrice)
+
+    })
+    $("#deliveryBtn").click(function(){
+        var personN=$("#personName").val()
+        alert(personN)
     })
 })

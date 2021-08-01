@@ -103,16 +103,16 @@
                 </select></br>
                 <label>Enter the number:</label>
                 <input id="pizzaNumber" type="number" min="1" placeholder="0"></br>
-                <input id="submit" type="submit" value="checkout">
+                <input id="submit" type="submit" class="btn btn-success m-3" value="checkout">
             </form>
         </div>
     <!-- Order has been received -->
         <div class="col-sm-6">
         <div id="receivedOrder" class="">
             <p>Your order has been received. Your bill is <span id="showPrice"></span></p>
-            <input id="askDelivery" type="button" value="Home Delivery">
-            <input id="pick" type="button" value="Pick">
-            <input id="add" type="button" value="Add">
+            <input id="askDelivery" type="button" class="btn btn-success" value="Home Delivery">
+            <input id="pick" type="button" class="btn btn-success" value="Pick">
+            <input id="add" type="button" class="btn btn-success" value="Add">
         </div>
     <!-- choose location -->
         <section id="locate" class="">
@@ -138,7 +138,7 @@
             <p class="text-center">The total charges will be:<span id="totalPrice"></span></p>
             <p>Thank you for choosing us. We can't wait to serve you again next time.</p>
             <p>Cheers!</p>
-            <input id="back" type="button" value="Orders">
+            <input id="back" type="button" class="btn btn-success" value="Orders">
         </div>
     </section>
 
@@ -147,21 +147,19 @@
         <div>
             <p>Welcome to pick your pizza phisically at Pizza Peddlers.</br> Our contacts: +254705315235</p>
             <p>Thank you for choosing us. We can't wait to serve you again next time.</br> Cheers!</p>
-            <input id="orders" type="button" value="Orders">
+            <input id="orders" type="button" class="btn btn-success" value="Orders">
         </div>
     </div>
 
     <!--contact section -->
     <section id="contacts" class="mb-3 pb-5 contact">
         <div>
-            <p class="pt-3">Please drop your feedback here..</p>
-            <form action="" id="feedback">
+            <p class="pt-3 pl-5 text-light">Please drop your feedback here..</p>
+            <form action="" id="feedback" class="ml-4 form-group">
                 <div class="row">
-                    <input type="text" class="form-control col-sm-5" placeholder="Name">
+                    <input type="text" class="form-control col-sm-5 justify-content-between " placeholder="Name">
                     <input type="text" class="form-control col-sm-5" placeholder="Email">
-                </div>
-                <div class="mt-3">
-                    <textarea placeholder="Enter Your feedback" class="form-control class=" rows="2"></textarea>
+                    <textarea placeholder="Enter Your feedback" class="form-control mt-3" rows=""></textarea>
                 </div>
             </form>
         </div>

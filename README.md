@@ -10,7 +10,11 @@ Requirements:
         <li>Git</li>
         <li>Github</li>
         <li>Web browser</li>
+        <li>An editor</li>
     </ol>
+    Fork or clone the repository using the below provided link</BR>
+    https://github.com/KyleTrippK/Pizza-peddler.git
+    Open the project using an editor, then go live on a browser
 ### Technologies Used
 The following languages have been used to develop the project
     <ol>
@@ -31,8 +35,8 @@ No bugs have been identified in the project.
 cell:  +254705315235 
 Mail: kyletrippK@gmail.com
 
-### [license] (mit)
-
+### license
+[License](./license)
 ### Website screenshots
 ![First screenshot](./Assets/pizzapeddlers1.png)
-![Second screenshot](./Assets/pizzapeddlers2.png)
+![Second screenshot](./Assets/pizzapeddler2.png)

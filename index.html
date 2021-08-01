@@ -61,26 +61,17 @@
                 <div class="col-sm-4">
                     <p class="text-center">Large</p>
                     <img src="./Assets/largepizza.jpg" alt="large-pizza" class="img-fluid">
-                    <div class="row mt-3 mb-3">
-                    <p class="text-center col-sm-4 mb-2">Price: 1000</p>
-                    <a href="#" class="col-sm-3"><input type="button"value="Choose"></a>
-                    </div>
+                    <p class="text-center">Price: 900</p>
                 </div>
                 <div class="col-sm-4">
                     <p class="text-center">Medium</p>
                     <img src="./Assets/mediumpizza.webp" alt="Medium-pizza" class="img-fluid">
-                    <div class="row mt-3 mb-3">
-                    <p class="text-center col-sm-4 mb-2">Price: 800</p>
-                    <a href="#" class="col-sm-3"><input type="button"value="Choose"></a>
-                    </div>
+                    <p class="text-center">Price: 600</p>
                 </div>
                 <div class="col-sm-4">
                     <p class="text-center">Small</p>
                     <img src="./Assets/smallpizza.jpg" alt="small-pizza" class="img-fluid">
-                    <div class="row mt-3 mb-3">
-                    <p class="text-center col-sm-4 mb-2">Price: 500</p>
-                    <a href="#" class="col-sm-3"><input type="button"value="Choose"></a>
-                    </div>
+                    <p class="text-center">Price: 300</p>
                 </div>
             </div>
     </section>
@@ -88,7 +79,7 @@
     <!-- Mainform -->
     <div id="mainform" class="row">
         <div class="col-sm-6">
-            <form id="choiceForm" class="col-sm-6">
+            <form id="choiceForm" class="col-sm-8">
                 <label>Choose a pizza size</label>
                 <select name="" id="pizzaSize" class="form-control">
                         <option value="small">small --@300</option>
@@ -115,52 +106,53 @@
                 <input id="submit" type="submit" value="checkout">
             </form>
         </div>
-        <!-- Order has been received -->
-        <div class="col-md-6">
-        <div id="receivedOrder" class="col-sm-6">
-            <p>Your order has been received. Your bill is <span id="showprice"></span></p>
-            <input id="askDelivery" type="button" value="Ask Delivery">
+    <!-- Order has been received -->
+        <div class="col-sm-6">
+        <div id="receivedOrder" class="">
+            <p>Your order has been received. Your bill is <span id="showPrice"></span></p>
+            <input id="askDelivery" type="button" value="Home Delivery">
             <input id="pick" type="button" value="Pick">
+            <input id="add" type="button" value="Add">
         </div>
     <!-- choose location -->
-        <section id="locate" class="col-sm-6">
+        <section id="locate" class="">
             <div id="locationsection">
-                <P class="text-center">Ask for home deliveries</P>
+                <P class="pl-5">Ask for home deliveries</P>
                 <p><span class="text-danger">*</span> Home delivery services are offered at Kes 150</p>
-                <form id="form3" action="" class="form-group">
-                    <input id="personName" class="form-control" type="text" placeholder="Fil your name">
-                    <input id="personContact" class="form-control" type="" placeholder="Fill your contact">
-                    <input id="personLocation" class="form-control" type="text" placeholder="Fill your location">
-                    <input id="deliveryBtn" class="btn btn-success" type="button" value="Place order">
+                <form id="formHome" action="" class="form-group">
+                    <input id="personName" class="form-control" type="text" placeholder="Fill your name" required>
+                    <input id="personContact" class="form-control mt-2" type="" placeholder="Fill your contact" required>
+                    <input id="personLocation" class="form-control mt-2" type="text" placeholder="Fill your location" required>
+                    <input id="deliveryBtn" class="btn btn-success mt-3" type="button" value="Place order">
                 </form>
             </div>
         </section>
     
+
+    </div>
+</div>
     <!-- Final price quatation -->
-    <section id="finalPrice">
+    <section id="finalPrice" class="pt-5">
         <div>
-            <p>Thank you <span></span>. Your order has been received ad will be immediately dropped at <span></span></p>
-            <p class="text-center">The total charges will be:<span id="tTotal"></span></p>
+            <p>Thank you <span id="clientName"></span>. Your order has been received and will be immediately dropped at <span id="home"></span></p>
+            <p class="text-center">The total charges will be:<span id="totalPrice"></span></p>
             <p>Thank you for choosing us. We can't wait to serve you again next time.</p>
             <p>Cheers!</p>
+            <input id="back" type="button" value="Orders">
         </div>
     </section>
-</div>
-</div>
 
     <!-- Our Location -->
     <div id="location">
         <div>
-            <p>Welcome to pick your pizza phisically at Pizza Peddlers</p>
-            <p>email: pizzapeddlers@yahoo.com</p>
-            <p>Thank you for choosing us. We can't wait to serve you again next time.</p>
-            <p>Cheers!</p>
+            <p>Welcome to pick your pizza phisically at Pizza Peddlers.</br> Our contacts: +254705315235</p>
+            <p>Thank you for choosing us. We can't wait to serve you again next time.</br> Cheers!</p>
+            <input id="orders" type="button" value="Orders">
         </div>
     </div>
 
-
     <!--contact section -->
-    <section id="idsects" class="mb-3 pb-5 contact">
+    <section id="contacts" class="mb-3 pb-5 contact">
         <div>
             <p class="pt-3">Please drop your feedback here..</p>
             <form action="" id="feedback">

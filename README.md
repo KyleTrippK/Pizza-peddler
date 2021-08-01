@@ -36,7 +36,7 @@ cell:  +254705315235
 Mail: kyletrippK@gmail.com
 
 ### license
-[License](./license)
+MIT [License](./license)
 ### Website screenshots
 ![First screenshot](./Assets/pizzapeddlers1.png)
 ![Second screenshot](./Assets/pizzapeddler2.png)

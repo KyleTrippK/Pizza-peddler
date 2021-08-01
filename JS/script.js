@@ -6,9 +6,9 @@ $(document).ready(function(){
     $("#location").addClass("text-center");
     $("#toppings").addClass("text-center");
     $("#toppingsbuttons").addClass("text-center");
-    $("#locationsection").addClass("text-center");
-    $("#idsects").addClass("text-center");
-    $("#final").addClass("text-center");
+    // $("locationsection").addClass("text-center");
+    // $("#idsects").addClass("text-center");
+    $("#final, #finalPrice").addClass("text-center");
     $("#receivedOrder, #locate, #location, #finalPrice").hide();
 })
 
@@ -21,7 +21,7 @@ function pizza(size, crust, toppings, number,){
     this.number = number;
 }
 $(document).ready(function(){
-    $("#choiceForm").submit(function(event){
+    $("#choiceForm").last().submit(function(event){
         event.preventDefault();
         var pizzaSize = $("#pizzaSize").val();
         var pizzaCrust = $("#pizzaCrust").val();
@@ -68,28 +68,49 @@ $(document).ready(function(){
         else{
             toppingPrice = 40;
         }
-        // var Delivery = 150;
         pizzaPrice = (sizePrice + crustPrice + toppingPrice +150)*pizzaNumber;
-        // var deliv = pizzaPrice  = Delivery
         $("#receivedOrder").show();
-        $("#showprice").html(pizzaPrice);
+        $("#showPrice").html(pizzaPrice);
+        $("#submit").hide();
+
+
+        $("#add").click(function(){
+            var pizzaSize = $("#pizzaSize option:selected").val();
+            $("#showPrice").append().last(piza.size);
+        })
+        $("input#pizzaSize").val("");
     })
     $("#askDelivery").click(function(){
         $("#receivedOrder").hide();
         $("#locate").show();
     })
     $("#pick").click(function(){
-        $("#receivedOrder").hide();
+        $("#receivedOrder, #mainform").hide();
         $("#location").show();
     })
-    $("#deliveryBtn").click(function(){
+    $("#orders").click(function(){
+        $("#mainform").show();
         $("#location").hide();
-        $("#finalPrice").show();
-        $("#tTotal").html(pizzaPrice)
-
+        $("#submit").show();
     })
     $("#deliveryBtn").click(function(){
-        var personN=$("#personName").val()
-        alert(personN)
+        var clientLocation = $("#personLocation").val();
+        var client = $("#personName").val();
+        var totalPrice = pizzaPrice +  150;
+        if(client == ""){
+            alert("Please enter your username!");
+        }
+        else{
+        $("#locate").hide();
+        $("#clientName").html(client);
+        $("#home").html(clientLocation);
+        $("#finalPrice").show();
+        $("#choiceForm").hide();
+        $("#totalPrice").html(totalPrice);
+        }
+    })
+    $("#back").click(function(){
+        $("#choiceForm, #submit").show();
+        $("#finalPrice").hide();
     })
 })

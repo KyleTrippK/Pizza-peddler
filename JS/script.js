@@ -6,8 +6,6 @@ $(document).ready(function(){
     $("#location").addClass("text-center");
     $("#toppings").addClass("text-center");
     $("#toppingsbuttons, #icons").addClass("text-center");
-    // $("locationsection").addClass("text-center");
-    // $("#idsects").addClass("text-center");
     $("#final, #finalPrice").addClass("text-center");
     $("#receivedOrder, #locate, #location, #finalPrice, #homeless").hide();
 })
@@ -122,9 +120,7 @@ $(document).ready(function(){
                 $("#totalPizza").html(totalPrice)
                 $("#clientName").html(client);
                 $("#home").html(clientLocation);
-                $("#choiceForm").hide();
-                // $("#totalPizza").html(pizzaPrice);
-            }
+                $("#choiceForm").hide();            }
         }
     })
 

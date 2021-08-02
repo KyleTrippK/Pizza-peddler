@@ -113,7 +113,7 @@
     <!-- Order has been received -->
         <div class="col-sm-6">
         <div id="receivedOrder" class="">
-            <p>Your order has been received. Your bill is <span id="showPrice"></span></p>
+            <p>Your order has been received.</br>You have ordered <span id="many"></span> pizza. Total bill is <span id="showPrice"></span></p>
             <input id="askDelivery" type="button" class="btn btn-success" value="Home Delivery">
             <input id="pick" type="button" class="btn btn-success" value="Pick">
             <input id="add" type="button" class="btn btn-success" value="Add">
@@ -138,8 +138,8 @@
     <!-- Final price quatation -->
     <section id="finalPrice" class="pt-5">
         <div>
-            <p>Thank you <span id="clientName"></span>. Your order has been received and will be immediately dropped at <span id="home"></span></p>
-            <p class="text-center">The total charges will be:<span id="totalPrice"></span></p>
+            <p>Thank you <span id="clientName"></span>. <span id="homeFull">Your order has been received and will be immediately dropped at <span id="home"></span></span>. <span id="homeless">Your order has been received but please provide your Location. Contact us at 0705315235.</span></p>
+            <p class="text-center">The total bill for Pizza:<span id="totalPizza"></span></br> Delivery charges are kes 150</br> Total bill is <span id="totalPrice"></span></p>
             <p>Thank you for choosing us. We can't wait to serve you again next time.</p>
             <p>Cheers!</p>
             <input id="back" type="button" class="btn btn-success" value="Orders">
@@ -156,7 +156,7 @@
     </div>
 
     <!--contact section -->
-    <section id="contacts" class="mb-3 pb-5 contact">
+    <section id="contacts" class="mb-3  mt-3 pb-3 contact">
         <div>
             <p class="pt-3 pl-5 text-light">Please drop your feedback here..</p>
             <form action="" id="feedback" class="ml-4 form-group">
@@ -165,6 +165,7 @@
                     <input type="text" class="form-control col-sm-5" placeholder="Email">
                     <textarea placeholder="Enter Your feedback" class="form-control mt-3" rows=""></textarea>
                 </div>
+<<<<<<< HEAD
                 <section class="">
             </form>
         </div>
@@ -173,6 +174,15 @@
             <a href="x" class="href"><img src="./Assets/you_tube.png" alt=""></a>
             <a href="x" class="href"><img src="./Assets/facebook.png" alt=""></a>
         </div>
+=======
+            </form>
+        </div>
+            <div class="container align-items-center" id="icons">
+                <a href="x" class="href"><img src="./Assets/twitter.png" alt=""></a>
+                <a href="x" class="href"><img src="./Assets/you_tube.png" alt=""></a>
+                <a href="x" class="href"><img src="./Assets/facebook.png" alt=""></a>
+            </div>
+>>>>>>> master
     </section>
 </body>
 <script src="./JS/script.js"></script>

@@ -10,11 +10,11 @@ Requirements:
         <li>Git</li>
         <li>Github</li>
         <li>Web browser</li>
-        <li>An editor</li>
+        <li>A web editor</li>
     </ol>
-    Fork or clone the repository using the below provided link</BR>
-    https://github.com/KyleTrippK/Pizza-peddler.git
-    Open the project using an editor, then go live on a browser
+    Fork or clone the repository using the below provided link</br>
+    https://github.com/KyleTrippK/Pizza-peddler.git</br>
+    Open the project using a web editor, then go live on a browser
 ### Technologies Used
 The following languages have been used to develop the project
     <ol>
@@ -26,7 +26,7 @@ The following languages have been used to develop the project
     </ol>
 
 ### Live site
-Here's the link to the project's [live site]()
+Here's the link to the project's [live site] (https://kyletrippk.github.io/Pizza-peddler/)
 
 ### Bugs
 No bugs have been identified in the project.

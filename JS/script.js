@@ -9,11 +9,11 @@ $(document).ready(function(){
     // $("locationsection").addClass("text-center");
     // $("#idsects").addClass("text-center");
     $("#final, #finalPrice").addClass("text-center");
-    $("#receivedOrder, #locate, #location, #finalPrice").hide();
+    $("#receivedOrder, #locate, #location, #finalPrice, #homeless").hide();
 })
 
 // Business logic
-var sizePrice, crustPrice, toppingPrice, pizzaPrice;
+var sizePrice, crustPrice, toppingPrice, pizzaPrice, pizzaNumber;
 function pizza(size, crust, toppings, number,){
     this.size = size;
     this.crust = crust;
@@ -21,7 +21,7 @@ function pizza(size, crust, toppings, number,){
     this.number = number;
 }
 $(document).ready(function(){
-    $("#choiceForm").last().submit(function(event){
+    $("#choiceForm").submit(function(event){
         event.preventDefault();
         var pizzaSize = $("#pizzaSize").val();
         var pizzaCrust = $("#pizzaCrust").val();
@@ -73,14 +73,15 @@ $(document).ready(function(){
         pizzaPrice = (sizePrice + crustPrice + toppingPrice)*pizzaNumber;
         $("#receivedOrder").show();
         $("#showPrice").html(pizzaPrice);
+        $("#many").html(pizzaNumber);
         $("#submit").hide();
 
 
-        $("#add").click(function(){
-            var pizzaSize = $("#pizzaSize option:selected").val();
-            $("#showPrice").append().last(piza.size);
-        })
-        $("input#pizzaSize").val("");
+        // $("#add").click(function(){
+        //     var pizzaSize = $("#pizzaSize option:selected").val();
+        //     $("#showPrice").append().last(piza.size);
+        // })
+        // $("input#pizzaSize").val("");
     })
     $("#askDelivery").click(function(){
         $("#receivedOrder").hide();
@@ -95,6 +96,7 @@ $(document).ready(function(){
         $("#location").hide();
         $("#submit").show();
     })
+    //Home delivery section.
     $("#deliveryBtn").click(function(){
         var clientLocation = $("#personLocation").val();
         var client = $("#personName").val();
@@ -103,14 +105,27 @@ $(document).ready(function(){
             alert("Please enter your username!");
         }
         else{
-        $("#locate").hide();
-        $("#clientName").html(client);
-        $("#home").html(clientLocation);
-        $("#finalPrice").show();
-        $("#choiceForm").hide();
-        $("#totalPrice").html(totalPrice);
+            if(clientLocation == ""){
+                $("#finalPrice").show();
+                $("#homeFull").hide();
+                $("#locate").hide();
+                $("#clientName").html(client);
+                $("#choiceForm").hide();
+                $("#totalPrice").html(totalPrice);
+                $("#homeless").show();
+            }
+            else{
+                $("#locate").hide();
+                $("#finalPrice").show();
+                $("#totalPizza").html(totalPrice)
+                $("#clientName").html(client);
+                $("#home").html(clientLocation);
+                $("#choiceForm").hide();
+                $("#totalPizza").html(pizzaPrice);
+            }
         }
     })
+    // final display
     $("#back").click(function(){
         $("#choiceForm, #submit").show();
         $("#finalPrice").hide();

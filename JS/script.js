@@ -40,7 +40,7 @@ $(document).ready(function(){
         else{
             sizePrice = 900;
         }
-        
+
         //pizza crust against price
         if(piza.crust == "stuffed crust"){
             crustPrice = 50;
@@ -113,7 +113,7 @@ $(document).ready(function(){
                 $("#locate").hide();
                 $("#clientName").html(client);
                 $("#choiceForm").hide();
-                $("#totalPrice").html(totalPrice);
+                $("#totalPizza").html(totalPrice);
                 $("#homeless").show();
             }
             else{
@@ -123,7 +123,7 @@ $(document).ready(function(){
                 $("#clientName").html(client);
                 $("#home").html(clientLocation);
                 $("#choiceForm").hide();
-                $("#totalPizza").html(pizzaPrice);
+                // $("#totalPizza").html(pizzaPrice);
             }
         }
     })

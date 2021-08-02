@@ -40,6 +40,7 @@ $(document).ready(function(){
         else{
             sizePrice = 900;
         }
+        
         //pizza crust against price
         if(piza.crust == "stuffed crust"){
             crustPrice = 50;
@@ -96,6 +97,7 @@ $(document).ready(function(){
         $("#location").hide();
         $("#submit").show();
     })
+
     //Home delivery section.
     $("#deliveryBtn").click(function(){
         var clientLocation = $("#personLocation").val();
@@ -125,6 +127,7 @@ $(document).ready(function(){
             }
         }
     })
+
     // final display
     $("#back").click(function(){
         $("#choiceForm, #submit").show();
